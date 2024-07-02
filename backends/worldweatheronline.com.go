@@ -184,7 +184,7 @@ func wwoParseDay(day wwoDay, index int) (ret iface.Day) {
 
 	if day.Hourly != nil && len(day.Hourly) > 0 {
 		for _, slot := range day.Hourly {
-			ret.Slots = append(ret.Slots, wwoParseCond(slot, date))
+			ret.Slots = append(ret.Slots, wwoParseCond(slot,  ""))
 		}
 	}
 
